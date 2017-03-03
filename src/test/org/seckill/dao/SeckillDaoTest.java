@@ -1,4 +1,4 @@
-package org.seckill.test.dao;
+package org.seckill.dao;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
