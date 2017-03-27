@@ -8,7 +8,25 @@
     <name>seckill Maven Webapp</name>
     <url>http://maven.apache.org</url>
 
+    <properties>
+        <weixin-java-mp.version>2.5.0</weixin-java-mp.version>
+    </properties>
+
+
+    <repositories>
+        <repository>
+            <id>aliyunmaven</id>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+        </repository>
+    </repositories>
+
     <dependencies>
+        <dependency>
+            <groupId>com.github.binarywang</groupId>
+            <artifactId>weixin-java-mp</artifactId>
+            <version>2.5.0</version>
+        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -68,11 +86,27 @@
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
+
+<!--
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.5.4</version>
+        </dependency>
+-->
+
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>2.5.4</version>
         </dependency>
+<!--
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.5.4</version>
+        </dependency>
+-->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
@@ -124,6 +158,8 @@
             <artifactId>spring-test</artifactId>
             <version>4.1.7.RELEASE</version>
         </dependency>
+
+
 
     </dependencies>
     <build>

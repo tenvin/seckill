@@ -24,7 +24,7 @@ import java.util.List;
  * Created by Administrator on 2017/3/8.
  */
 @Controller
-@RequestMapping("/seckill")
+@RequestMapping("/seckill/")
 public class SeckillController {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -32,14 +32,14 @@ public class SeckillController {
     @Autowired
     private SeckillService seckillService;
 
-    @RequestMapping(name = "/list", method = RequestMethod.GET)
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
     public String list(Model model) {
         List<Seckill> list = seckillService.getSeckillList();
         model.addAttribute("list", list);
         return "list";
     }
 
-    @RequestMapping(name = "/{seckillId}/detail", method = RequestMethod.GET)
+    @RequestMapping(value = "/{seckillId}/detail", method = RequestMethod.GET)
     public String detail(@PathVariable("seckillId") Long seckillId, Model model) {
 
         if (seckillId == null) {
@@ -53,7 +53,7 @@ public class SeckillController {
         return "detail";
     }
 
-    @RequestMapping(name = "/{seckillId}/exposer",
+    @RequestMapping(value = "/{seckillId}/exposer",
             method = RequestMethod.POST,
             produces = {"application/json;charset=UTF-8"})
     @ResponseBody
@@ -69,7 +69,7 @@ public class SeckillController {
         return result;
     }
 
-    @RequestMapping(name = "/{seckillId}/{md5}/execution",
+    @RequestMapping(value = "/{seckillId}/{md5}/execution",
             method = RequestMethod.POST,
             produces = {"application/json;charset=UTF-8"})
     @ResponseBody
