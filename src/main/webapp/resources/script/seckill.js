@@ -24,6 +24,14 @@ var seckill = {
 
             if(!seckill.validatePhone(killPhone)){
                 var killPhoneModal = $.('#killPhoneModal');
+                killPhoneModal.modal({
+                    show: true,
+                    backdrop:'static',
+                    keyboard:false
+                });
+                $('#killPhoneBtn').click(function(){
+                    var inputPhone =
+                })
 
             }
         }
