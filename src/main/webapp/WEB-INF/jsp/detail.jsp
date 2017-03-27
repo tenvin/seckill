@@ -14,7 +14,10 @@
         </div>
 
         <div class="pannel-body">
-
+            <h2 class="text-danger">
+                <span class="glyphicon glyphicon-time"></span>
+                <span class="glyphicon" id="seckill-box"></span>
+            </h2>
         </div>
     </div>
 </div>
