@@ -1,6 +1,5 @@
 package org.seckill.web;
 
-import org.apache.ibatis.annotations.Param;
 import org.seckill.dto.Exposer;
 import org.seckill.dto.SeckillExecution;
 import org.seckill.dto.SeckillResult;
@@ -8,7 +7,6 @@ import org.seckill.entity.Seckill;
 import org.seckill.enums.SeckillStatEnum;
 import org.seckill.exception.RepeatKillException;
 import org.seckill.exception.SeckillCloseException;
-import org.seckill.exception.SeckillException;
 import org.seckill.service.SeckillService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -77,7 +75,7 @@ public class SeckillController {
                                                    @PathVariable("md5") String md5,
                                                    @CookieValue(value = "killPhone", required = false) Long phone) {
         if (phone==null){
-            return new SeckillResult<SeckillExecution>(false,"δע��");
+            return new SeckillResult<SeckillExecution>(false,"未注册");
         }
 
         SeckillResult<SeckillExecution> result;
