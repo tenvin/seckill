@@ -9,16 +9,16 @@ import org.seckill.enums.SeckillStatEnum;
 public class SeckillExecution {
     private long seckillId;
 
-    //ÃëÉ±Ö´ĞĞ½á¹ûµÄ×´Ì¬
+    //ç§’æ€æ‰§è¡Œç»“æœçš„çŠ¶æ€
     private int state;
 
-    //×´Ì¬µÄÃ÷ÎÄ±êÊ¶
+    //çŠ¶æ€çš„æ˜æ–‡æ ‡è¯†
     private String stateInfo;
 
-    //µ±ÃëÉ±³É¹¦Ê±£¬ĞèÒª´«µİÃëÉ±³É¹¦µÄ¶ÔÏó»ØÈ¥
+    //å½“ç§’æ€æˆåŠŸæ—¶ï¼Œéœ€è¦ä¼ é€’ç§’æ€æˆåŠŸçš„å¯¹è±¡å›å»
     private SuccessKilled successKilled;
 
-    //ÃëÉ±³É¹¦·µ»ØËùÓĞĞÅÏ¢
+    //ç§’æ€æˆåŠŸè¿”å›æ‰€æœ‰ä¿¡æ¯
     public SeckillExecution(long seckillId, SeckillStatEnum statEnum, SuccessKilled successKilled) {
         this.seckillId = seckillId;
         this.state = statEnum.getState();
@@ -26,7 +26,7 @@ public class SeckillExecution {
         this.successKilled = successKilled;
     }
 
-    //ÃëÉ±Ê§°Ü
+    //ç§’æ€å¤±è´¥
     public SeckillExecution(long seckillId, SeckillStatEnum statEnum) {
         this.seckillId = seckillId;
         this.state = statEnum.getState();

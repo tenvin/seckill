@@ -9,16 +9,16 @@ import org.seckill.entity.SuccessKilled;
 public interface SuccessKilledDao {
 
     /**
-     * ²åÈë¹ºÂòÃ÷Ï¸,¿É¹ıÂËÖØ¸´
+     * æ’å…¥è´­ä¹°æ˜ç»†,å¯è¿‡æ»¤é‡å¤
      * @param seckillId
      * @param userPhone
-     * @return²åÈëµÄĞĞÊı
+     * @returnæ’å…¥çš„è¡Œæ•°
      */
     int insertSuccessKilled(@Param("seckillId") long seckillId, @Param("userPhone") long userPhone);
 
 
     /**
-     * ¸ù¾İÃëÉ±ÉÌÆ·µÄid²éÑ¯Ã÷Ï¸SuccessKilled¶ÔÏó(¸Ã¶ÔÏóĞ¯´øÁËSeckillÃëÉ±²úÆ·¶ÔÏó)
+     * æ ¹æ®ç§’æ€å•†å“çš„idæŸ¥è¯¢æ˜ç»†SuccessKilledå¯¹è±¡(è¯¥å¯¹è±¡æºå¸¦äº†Seckillç§’æ€äº§å“å¯¹è±¡)
      * @param seckillId
      * @return
      */
