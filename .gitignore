@@ -1,0 +1,9 @@
+# idea
+/.idea
+*/.idea
+*.iml
+.DS_Store
+
+# maven target folder
+/target
+*/target
